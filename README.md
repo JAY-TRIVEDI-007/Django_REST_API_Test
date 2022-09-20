@@ -4,27 +4,29 @@
 
 ### Table-1 Users
 ```sql
-CREATE TABLE Users (uid, f_name,, l_name, age, house_no, street, city, country);
+CREATE TABLE Users (uid int, f_name varchar(255), l_name varchar(255), age int, house_no varchar(255), street varchar(255), city varchar(255), country varchar(255));
 ```
+
+### Dummy Data
 
 ### Table-2 Cars
 ```sql
-CREATE TABLE Cars (cid, brand, model, number_plate);
+CREATE TABLE Cars (cid int, brand varchar(255), model varchar(255), number_plate varchar(255));
 ```
 
 ### Table-3 Ads
 ```sql
-CREATE TABLE Ads (aid, title, description, price_per_km);
+CREATE TABLE Ads (aid int, title varchar(255), description varchar(255), price_per_km int);
 ```
 
 ### Table-4 Posts
 ```sql
-CREATE TABLE Posts (uid, ad_id);
+CREATE TABLE Posts (uid int, ad_id int);
 ```
 
 ### Table-5 Owner
 ```sql
-CREATE TABLE Owner (uid, car_id);
+CREATE TABLE Owner (uid int, car_id int);
 ```
 
 
