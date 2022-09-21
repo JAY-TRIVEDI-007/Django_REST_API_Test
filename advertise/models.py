@@ -1,6 +1,8 @@
 from django.db import models
 from users.models import User
 
+__all__ = ["Ads", "Post"]
+
 
 # Create your models here.
 class Ads(models.Model):

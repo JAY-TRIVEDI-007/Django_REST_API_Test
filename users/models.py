@@ -1,6 +1,9 @@
 from django.db import models
 
 
+__all__ = ["User"]
+
+
 # Create your models here.
 class User(models.Model):
     userID = models.AutoField(primary_key=True)

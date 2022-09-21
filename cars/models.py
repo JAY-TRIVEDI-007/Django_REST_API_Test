@@ -1,6 +1,8 @@
 from django.db import models
 from users.models import User
 
+__all__ = ["Car", "Owner"]
+
 
 # Create your models here.
 class Car(models.Model):
