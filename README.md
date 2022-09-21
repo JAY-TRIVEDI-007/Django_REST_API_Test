@@ -1,32 +1,48 @@
 # REST API Test Project
 
+## Models
+
+### User model
+    User model is used for users information.
+
+### Car model
+    Car model is used for user's car details.
+
+### Ad model
+    Ad model is used for user's advertisment on cars.
+
+
 ## Database Schema
 
 ### Table-1 Users
 ```sql
-CREATE TABLE Users (uid int, f_name varchar(255), l_name varchar(255), age int, house_no varchar(255), street varchar(255), city varchar(255), country varchar(255));
+CREATE TABLE Users (userID int AUTO_INCREMENT, f_name varchar(255) NOT NULL, l_name varchar(255) NOT NULL, age int NOT NULL,
+house_no varchar(255) NOT NULL, street varchar(255) NOT NULL, city varchar(255) NOT NULL, country varchar(255) NOT NULL,
+PRIMARY KEY (userID));
 ```
-
-### Dummy Data
 
 ### Table-2 Cars
 ```sql
-CREATE TABLE Cars (cid int, brand varchar(255), model varchar(255), number_plate varchar(255));
+CREATE TABLE Cars (carID int AUTO_INCREMENT, brand varchar(255) NOT NULL , model varchar(255) NOT NULL,
+number_plate varchar(255) NOT NULL, PRIMARY KEY (carID));
 ```
 
 ### Table-3 Ads
 ```sql
-CREATE TABLE Ads (aid int, title varchar(255), description varchar(255), price_per_km int);
+CREATE TABLE Ads (adID int AUTO_INCREMENT, title varchar(255) NOT NULL , description varchar(255) NOT NULL,
+price_per_km int NOT NULL, PRIMARY KEY (adID));
 ```
 
 ### Table-4 Posts
 ```sql
-CREATE TABLE Posts (uid int, ad_id int);
+CREATE TABLE Posts (postID int AUTO_INCREMENT, userID int, adID int, PRIMARY KEY (postID),
+FOREIGN KEY (userID) REFERENCES Users(userID), FOREIGN KEY (adID) REFERENCES Ads(adID));
 ```
 
 ### Table-5 Owner
 ```sql
-CREATE TABLE Owner (uid int, car_id int);
+CREATE TABLE Owner (ownerID int AUTO_INCREMENT, userID int, carID int, PRIMARY KEY (ownerID),
+FOREIGN KEY (userID) REFERENCES Users(userID), FOREIGN KEY (carID) REFERENCES Cars(carID));
 ```
 
 
