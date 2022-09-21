@@ -73,14 +73,15 @@ FOREIGN KEY (userID) REFERENCES Users(userID), FOREIGN KEY (carID) REFERENCES Ca
 4. [X] Start and Configure Project
 5. [X] Add apps
 6. [X] Add Models
-7. [X] Migrate and Test DB
-8. [X] Add API Views
-9. [X] Add CRUD operations
-10. [X] Add Custom Success Response
-11. [ ] Add Custom Failure Response
-12. [ ] Add Token Authentication
-13. [ ] Add Pagination
-14. [ ] Add Posts and Owner related APIs
+7. [X] Add Models to Django Admin
+8. [X] Migrate and Test DB
+9. [X] Add API Views
+10. [X] Add CRUD operations
+11. [X] Add Custom Success Response
+12. [ ] Add Custom Failure Response
+13. [ ] Add Token Authentication
+14. [ ] Add Pagination
+15. [ ] Add Posts and Owner related APIs
 
 
 # REFERENCES
