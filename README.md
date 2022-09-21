@@ -65,6 +65,24 @@ FOREIGN KEY (userID) REFERENCES Users(userID), FOREIGN KEY (carID) REFERENCES Ca
 ```
 
 
+## To-Do
+
+1. [X] Understand Requirements
+2. [X] Create Database Schema
+3. [X] Design API Pattern
+4. [X] Start and Configure Project
+5. [X] Add apps
+6. [X] Add Models
+7. [X] Migrate and Test DB
+8. [X] Add API Views
+9. [X] Add CRUD operations
+10. [X] Add Custom Success Response
+11. [ ] Add Custom Failure Response
+12. [ ] Add Token Authentication
+13. [ ] Add Pagination
+14. [ ] Add Posts and Owner related APIs
+
+
 # REFERENCES
 1. [Django REST Framework Docs](https://www.django-rest-framework.org/)
 2. [Django Docs](https://docs.djangoproject.com/en/4.1/)
