@@ -5,12 +5,31 @@
 ### User model
     User model is used for users information.
 
+#### Create -> /api/users
+    API call to create user in the database.
+
+#### Read -> /api/users/1
+    API call to get user information along with it's associated cars and ads.
+
+
 ### Car model
     Car model is used for user's car details.
+
+#### Create -> /api/cars
+    Create car and associte it with the user.
+
+#### Read -> /api/cars/1
+    Get car details with it's associated user.
+
 
 ### Ad model
     Ad model is used for user's advertisment on cars.
 
+#### Create -> /api/ad
+    Create ad and associate it with user.
+
+#### Read -> /api/ad/1
+    Read ad details with it's associated user.
 
 ## Database Schema
 
