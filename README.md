@@ -81,7 +81,7 @@ FOREIGN KEY (userID) REFERENCES Users(userID), FOREIGN KEY (carID) REFERENCES Ca
 12. [X] Add Custom Failure Response
 13. [X] Add Token Authentication
 14. [X] Add Pagination
-15. [ ] Add Posts and Owner related APIs
+15. [X] Add Posts and Owner related APIs
 
 
 # REFERENCES

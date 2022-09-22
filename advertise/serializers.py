@@ -3,9 +3,17 @@ from .models import Ads, Post
 
 
 class AdsSerializer(serializers.ModelSerializer):
+    owner = serializers.SerializerMethodField(read_only=True)
+
     class Meta:
         model = Ads
         fields = "__all__"
+
+    def get_owner(self, obj):
+        data = Post.objects.get(adID=obj.adID)
+        if data is not None:
+            return data.userID.userID
+        return None
 
     # def __init__(self, *args, **kwargs):
     #     super(AdsSerializer, self).__init__(self, *args, **kwargs)

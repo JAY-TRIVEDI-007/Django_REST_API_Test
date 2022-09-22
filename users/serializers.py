@@ -17,3 +17,7 @@ class UserSerializer(serializers.ModelSerializer):
         #     self.fields[key].error_messages["blank"] = f"{key} cannot be empty."
         #     print(f"{key} | {self.fields[key].error_messages}")
         # print(f"{self.fields}")
+
+
+class UserDataSerializer(serializers.Serializer):
+    userID = serializers.IntegerField(read_only=True)
