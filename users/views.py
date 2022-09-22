@@ -4,7 +4,9 @@ from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from rest_framework import viewsets, routers, generics
-
+from cars24_api.authentication import CustomAuthentication
+# from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 SUCCESS_RESPONSE = {'success': True}
@@ -23,6 +25,8 @@ class UserRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     lookup_field = "userID"
+    authentication_classes = [CustomAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def update(self, request, *args, **kwargs):
         res = super().update(request, *args, **kwargs)
@@ -43,6 +47,8 @@ class UserRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
 class UserCreateListAPIView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    authentication_classes = [CustomAuthentication]
+    permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         res = super().create(request, *args, **kwargs)
