@@ -3,13 +3,13 @@ from rest_framework.views import exception_handler
 
 
 def api_exception_handler(exc, context):
-    print(f"Exc: {exc}")
-    print(f"Context: {context}")
+    # print(f"Exc: {exc}")
+    # print(f"Context: {context}")
     response = exception_handler(exc, context)
 
-    print(f"ERROR Res: {response}")
-    print(f"ERROR Res data: {response.data}")
-    print(f"ERROR Res data: {response.status_code}")
+    # print(f"ERROR Res: {response}")
+    # print(f"ERROR Res data: {response.data}")
+    # print(f"ERROR Res data: {response.status_code}")
     if response is not None:
         for key in response.data:
             if key == 'detail':
